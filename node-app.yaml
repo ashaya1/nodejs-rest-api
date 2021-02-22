@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: node-app
-        image: ashu112/simple-rest-api:2.0 
+        image: ashu112/simple-rest-api:1.0 
         ports:
         - containerPort: 5000
         resources:
