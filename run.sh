@@ -21,10 +21,16 @@ push_img() {
 	docker push ${REPO_USER}:${VERSION}
 }
 
+rem_tar() {
+
+	rm -rf ${FILE_NAME}.tar
+}
+
 __main() {
 archive_img
 build_img
 push_img
+rem_tar
 }
 
 __main
