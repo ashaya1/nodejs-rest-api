@@ -1,22 +1,8 @@
-# A simple eWeb API with Node.js And Express.js
+# 1. Deployment yaml with replica set 1 of image NodeJs from docker hub
+# 2. Service yaml attached to my deployment Nodejs and NodePort 30007 bind to 50000
+# 3. Horizontal Pod Scaler is bind to deployment so that any cpu/load rise (50%) then scale to 5
 
-This is an experimental Web API With Swagger. There is no any database system behind it. It holds the item data in memory. Just an experimental project purpose. 
+:: Steps to apply
 
-## Getting Started
-
-:: To running locally
-
-```
-npm install
-npm start
-```
-
-:: To running tests 
-
-```
-npm test
-```
-
-# Steps to build image and push to Docker Hub (Choose alpine image for small size project)
-
-sh run.sh 1.0  (Where 1.0 is version as shell argument)
+kubectl apply -f node-app.yaml
+kubectl apply -f node-app-hpa.yaml
